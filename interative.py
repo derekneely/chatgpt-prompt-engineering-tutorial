@@ -5,9 +5,6 @@ from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
 
 openai.api_key = os.getenv('OPENAI_API_KEY')
-# openai.base_url="https://api.pawan.krd/cosmosrp/v1/"
-
-model = "gpt-4o-mini"
 
 def get_completion(prompt, model="gpt-3.5-turbo"):
     messages = [{"role": "user", "content": prompt}]
